@@ -9,7 +9,9 @@ import Home from './Home.jsx'
 import Register from './Register.jsx' 
 import Contact from './contact.jsx'
 import Login from './Login.jsx'
-import Navbar ,{ About ,Product} from './navbar.jsx'
+import Navbar ,{ About ,Product} from './navbar.jsx' 
+ import ResetPass from './ResetPass.jsx'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -24,7 +26,8 @@ createRoot(document.getElementById('root')).render(
           <Route path='/Contact' element={<Contact/>} />
           <Route path='/Login' element={<Login/>}/>
           <Route path='/About' element={<About/>} /> 
-          <Route  path='/Product' element={< Product/>}  />
+          <Route  path='/Product' element={< Product/>}  />  
+          <Route  path='/ResetPass' element={<ResetPass/>}  />
                   </Routes>
       {/* </MyContext.Provider> */}
     </BrowserRouter>

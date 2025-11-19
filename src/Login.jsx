@@ -32,13 +32,14 @@ import { Link } from 'react-router-dom'
 
 
   return (
-    < div><>  
+    < div className='lgn'><>  
            
 
            <h1>  Welcome to Anit</h1>
-           <h3>  Login ahare </h3>    
-
-          <form>
+           <h3>  Login Hare </h3>    
+<div className="login">
+ <form> 
+             <fieldset>
         <label >Full Name  </label>
       
      <input  name='name'  value={input.name} placeholder="name"   type ="text " onChange={f1}   />  
@@ -53,8 +54,11 @@ import { Link } from 'react-router-dom'
     <br/>
 
        <button onChange={done}> submit</button>  
-       
+       </fieldset>
  </form>
+
+</div>
+         
       <h2> Name  : {input.name} </h2>
       <h2> password :****</h2>
   
@@ -63,6 +67,10 @@ import { Link } from 'react-router-dom'
         <br/> 
 
         <Link to={'/Register'}><button>Register hare </button>  </Link>
+   
+<br/>
+<br/>
+   <Link to ={'/ResetPass'}> <button>Forgot password </button></Link>
 
 
     </></div>
