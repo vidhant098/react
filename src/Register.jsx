@@ -29,8 +29,8 @@ import { Link } from 'react-router-dom'
 
   return (
     < div><>   
-    <div className='Register'>
-             <fieldset>
+         <div className='Register'>
+            <fieldset>
   
            <h1>  Welcome to Anit</h1>
            <h3> Register</h3>    
@@ -42,7 +42,7 @@ import { Link } from 'react-router-dom'
 
     <br/>
     <br/> 
-     <label> Passwod    - </label>
+     <label> Password    - </label>
       <input name= "email" value = {input.email}   placeholder='email' type = 'text ' onChange={f1} />  
 
     <br/>  

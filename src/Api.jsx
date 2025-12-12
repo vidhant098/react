@@ -7,36 +7,37 @@ import Navbar from "./navbar";
 import { Link } from "react-router-dom";
 
 import Register from "./Register";
+import { FaInstagram, FaLinkedin, FaSearch } from "react-icons/fa";
+import SlideShow from "./SlideShow";
+       
+
+  
 
 function Api() {      
 
   let [apiData  ,   setData] = useState([]);
       let [filter , filterData]  = useState([])  ; 
 
-
   useEffect(() => {
     fetch("https://dummyjson.com/recipes")
-      .then((res) => res.json())
-      .then((data) => {
+       .then((res) => res.json())
+       .then((data) => {
         console.log(data.recipes);
-        setData(data.recipes); 
-         filterData(data.recipes)
+       setData(data.recipes); 
+       filterData(data.recipes)
       })  
           
   }, []);       
 
    function f1() 
    {  
-     let data1 = [...apiData].sort((a , b)=>
-    {
+     let data1 = [...apiData].sort((a , b)=> {
       return b.rating-a.rating ; 
-
     })
      
      setData(data1) ; 
 
    }
-   
 
     function f2()
     {
@@ -72,27 +73,41 @@ function Api() {
 
    function order()
    { 
-           
+       let data3 = []     
      
-   }
+   }  
+
+ function Search()
+ {
+    
+
+
+
+
+ }
+  
+
 
 
 
     return (      
    <>  
-  
-       
-       <div  className="container">   
-         
-          <input type="text" placeholder="search here"   style={{height:'50px'}}/>
 
 
-
-      <Navbar/>
+         <div  className="container">   
+                
+          <input type="text" placeholder="search here"   value={searchterm}  style={{height:'50px'}}/>
+           <FaSearch  onClick={Search}  style={{cursor:'pointer'}}/>
+      
+      <Navbar/> 
+      <SlideShow/> 
          <h1>  ANIt   The  Resto 🧑🏼‍🍳🧑🏼‍🍳🍴. </h1>    
           
-         <p> we serve Love❤️❤️ with food 🍽️ </p> 
+         <p> we serve Love❤️❤️ with food 🍽️ </p>  
 
+
+
+ 
 
           <div className="button">
           <button onClick={f1} className="rating" > low rating↑↑  </button> 
@@ -140,20 +155,34 @@ function Api() {
     <p> all rights reserved </p> 
      <p> help </p>  
       <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <a href="mailto:vidhantshrivas1@gmail.com" >
+       <a href="mailto:vidhantshrivas1@gmail.com" >
          📩✉️ Mail Us
-      </a>  
+        </a>  
 
-       <a href="#"> 📞 no : 9340638455 </a> 
-       <br/>
+         <a href="#"> 📞 no : 9340638455 </a> 
+         <br/>
      <a href="#"> 💬 Chat Support: Available inside the app</a>
           
      <br/> 
       
-       <h4>   Address:  📍 It park , jabalpur  Madhya Pradesh </h4>
+       <h4>Address:  📍 It park , jabalpur  Madhya Pradesh </h4>
             <h4>follow us for updates</h4> 
 
-      <a href="https://www.instagram.com/explore/"> instagram</a>
+   <div>
+
+    <a href="https://www.instagram.com/vidhant_shrivas/"> 
+         <FaInstagram size={30} color="purple" />
+
+    </a> 
+         
+          
+          <a href="https://www.linkedin.com/in/vidhant-shriwas-9a579730b/"> 
+          
+              <FaLinkedin   size={30}/>
+          </a>
+   </div>
+
+
      </div>
     </footer>
 

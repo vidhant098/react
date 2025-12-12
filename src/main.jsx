@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App.jsx'
 import Api from './Api.jsx'
 // import { MyContext } from './context.jsx'   // ✅ Make sure you export it like this
-import Color from './Color.jsx'
+
 import Home from './Home.jsx'
 import Register from './Register.jsx' 
 import Contact from './contact.jsx'

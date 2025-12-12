@@ -156,7 +156,7 @@ li:hover
    
    }
 
-  .Register { 
+  .Register{ 
        background-color: rgb(243, 140, 140);
         display: flex; 
          align-items: center; 
@@ -267,4 +267,11 @@ border:2px solid rgb(0, 0, 0);
 .lgn{
    background-color: #d37d7d;   
 
-}
+} 
+ a{
+      text-decoration: none;
+ } 
+  .navbar{
+    
+    border-radius: 5%;
+  }

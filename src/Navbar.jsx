@@ -16,29 +16,22 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <ul>  
-       
-          
-       
+            
         <li>
            <Link  to={'/Contact'} >  contact </Link> 
           </li> 
 
-       <li>
-        <Link  to={'about'}> about </Link>
-
-        </li>   
+         <li>
+              <Link  to={'/About'}> about </Link>
+         </li>   
          
         <Link to={'/Register'}>  login/register   </Link> 
                          
          {/* <li><button>contact us </button></li> */}
               
        <Link to={'Product/'}> our product </Link>
-        <Link
-                to={'/Register'} > 
-            
-                   <button>Register  hare</button>
-            </Link> 
-
+      
+        
       </ul>
     </nav>
   );
