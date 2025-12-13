@@ -65,9 +65,8 @@ function Api() {
   {
      let fast = [...apiData].sort((a  , b )=>{
        return a.prepTimeMinutes-b.prepTimeMinutes ;
- 
-
-     }) 
+      
+ }) 
       setData(fast)
   }
 
@@ -77,17 +76,10 @@ function Api() {
      
    }  
 
- function Search()
+ function HandleSearch() 
  {
-    
-
-
-
-
+      
  }
-  
-
-
 
 
     return (      
@@ -96,18 +88,14 @@ function Api() {
 
          <div  className="container">   
                 
-          <input type="text" placeholder="search here"   value={searchterm}  style={{height:'50px'}}/>
-           <FaSearch  onClick={Search}  style={{cursor:'pointer'}}/>
+          {/* <input type="text" placeholder="search here"   value={searchterm}  style={{height:'50px'}}/> */}
+           <FaSearch    style={{cursor:'pointer'}}/>
       
       <Navbar/> 
       <SlideShow/> 
          <h1>  ANIt   The  Resto 🧑🏼‍🍳🧑🏼‍🍳🍴. </h1>    
           
          <p> we serve Love❤️❤️ with food 🍽️ </p>  
-
-
-
- 
 
           <div className="button">
           <button onClick={f1} className="rating" > low rating↑↑  </button> 
@@ -132,7 +120,7 @@ function Api() {
                 <button>add to Card</button>    <button>Order now </button>
                  <h2>  price: { a.ingredients.length*50}$ </h2>
 
-               <h2>{a.name}</h2> <br></br>
+                <h2>{a.name}</h2> <br></br>
                 <h3 id="rating "> {a.rating} ⭐</h3>   
                  <h3 id= "time ">  deliver in  {a.prepTimeMinutes} minutes⌚  </h3> 
                   <h5>  ingredients  : {a.ingredients}</h5> 
@@ -155,7 +143,7 @@ function Api() {
     <p> all rights reserved </p> 
      <p> help </p>  
       <div style={{ textAlign: "center", marginTop: "50px" }}>
-       <a href="mailto:vidhantshrivas1@gmail.com" >
+       <a href="mailto:vidhantshrivas1@gmail.com" > 
          📩✉️ Mail Us
         </a>  
 
@@ -165,7 +153,7 @@ function Api() {
           
      <br/> 
       
-       <h4>Address:  📍 It park , jabalpur  Madhya Pradesh </h4>
+       <h4>Address: 📍 It park , jabalpur  Madhya Pradesh </h4>
             <h4>follow us for updates</h4> 
 
    <div>
