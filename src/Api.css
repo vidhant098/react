@@ -125,7 +125,7 @@ footer{
             text-decoration: none; 
              /* animation: vidhant 4s ease-in 1s  infinite normal   ;  */
               
-              
+            
                   box-shadow:  10px 12px 13px rgb(76, 12, 12);   
 
        }  
@@ -133,21 +133,16 @@ footer{
 
  ul li{list-style-type: none;   
 
-   text-decoration: none;
-   
+   text-decoration: none;  
    
  }   
 
 ul :hover{
    background-color: rgb(167, 186, 186);
 }
-  
-  
-  
 
 li:hover
 {
-  
    cursor: pointer;  
    background-color: #fdc4c4;
   color: white;

@@ -17,6 +17,8 @@ function Api() {
 
   let [apiData  ,   setData] = useState([]);
       let [filter , filterData]  = useState([])  ; 
+      
+        let [search , setSearch] = useState("")
 
   useEffect(() => {
     fetch("https://dummyjson.com/recipes")
@@ -27,7 +29,32 @@ function Api() {
        filterData(data.recipes)
       })  
           
-  }, []);       
+  }, []);    
+  
+    function HandleSearch( e) {
+
+    setSearch(e.target.value) ; 
+     
+ if( value ==="")
+ {
+  setData(filter) ; 
+ } 
+
+  const searchedData =  filter.filter((item ) => {
+       item.name.toLowerCase().includes(search.toLowerCase()) ;
+   setData(searchedData );
+
+  
+      } 
+  
+
+);
+  
+
+ } 
+
+
+
 
    function f1() 
    {  
@@ -76,24 +103,24 @@ function Api() {
      
    }  
 
- function HandleSearch() 
- {
-      
- }
+
 
 
     return (      
    <>  
-    
 
-<h1 className="text-3xl font-bold underline">
-tailwind css is  working
-</h1>
+         <div  className="container"> 
 
-         <div  className="container">             
-          {/* <input type="text" placeholder="search here"   value={searchterm}  style={{height:'50px'}}/> */}
-           <FaSearch    style={{cursor:'pointer'}}/>
-      
+           <div className=" flex items-center gap-2 my-6"> 
+         <input  className="w-72 px-4 py-2 border border-gray-300 rounded-lg 
+               focus:outline-none focus:ring-2 focus:ring-orange-400" type="text" placeholder="search here"   value={search}  onChange={HandleSearch}  style={{height:'50px'}}/>                 
+  
+
+   <FaSearch    className="cursor-pointer" size={30} color="red" >
+            </FaSearch>
+           </div>
+
+           
       <Navbar/> 
       <SlideShow/> 
          <h1>  ANIt   The  Resto 🧑🏼‍🍳🧑🏼‍🍳🍴. </h1>    
@@ -137,7 +164,6 @@ tailwind css is  working
               
               </>)
            
-
       } )
   }     
   
